@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  base = "sonmo-app"
+
+[build.environment]
+  NEXT_PUBLIC_BASE_URL = "https://sonmo-shop.netlify.app"
+  NODE_VERSION = "18"
+  NPM_VERSION = "9"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
